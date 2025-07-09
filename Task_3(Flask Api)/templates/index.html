@@ -1,0 +1,14 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head><title>Titanic Predictor</title></head>
+<body>
+    <h2>Titanic Survival Prediction</h2>
+    <form action="/predict" method="post">
+        {% for col in feature_cols %}
+        <label>{{ col }}:</label><input name="{{ col }}" required><br>
+        {% endfor %}
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
